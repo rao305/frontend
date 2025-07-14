@@ -78,24 +78,24 @@ const AIAssistant: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-800 rounded-lg border border-gray-700 shadow-lg">
+    <div className="min-h-screen flex flex-col bg-white rounded-sm border border-gray-200 shadow-professional-xl">
       {/* Header */}
-      <div className="bg-gradient-to-r from-yellow-600 to-yellow-700 text-gray-800 p-8 rounded-t-lg shadow-lg">
+      <div className="bg-professional-black text-white p-12 rounded-t-sm">
         <div className="flex items-center space-x-3">
-          <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center shadow-lg">
-            <Bot className="w-8 h-8 text-yellow-600" />
+          <div className="w-20 h-20 bg-white rounded-sm flex items-center justify-center">
+            <Bot className="w-10 h-10 text-professional-black" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold">Boiler AI Assistant</h1>
-            <p className="text-gray-800 text-lg">Your intelligent academic advisor and course planning companion</p>
-            <div className="flex items-center space-x-4 mt-2">
-              <span className="bg-gray-800 bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">
+            <h1 className="text-5xl font-light tracking-tight mb-3">Boiler AI Assistant</h1>
+            <p className="text-gray-300 text-xl font-light">Your intelligent academic advisor and course planning companion</p>
+            <div className="flex items-center space-x-6 mt-6">
+              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-sm text-sm font-medium">
                 🎓 Academic Planning
               </span>
-              <span className="bg-gray-800 bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-sm text-sm font-medium">
                 📚 Course Recommendations
               </span>
-              <span className="bg-gray-800 bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-sm text-sm font-medium">
                 🔄 CODO Guidance
               </span>
             </div>
@@ -106,26 +106,26 @@ const AIAssistant: React.FC = () => {
       {/* Chat Container */}
       <div className="flex-1 flex">
         {/* Example Prompts Sidebar */}
-        <div className="w-80 bg-gray-700 border-r border-gray-600 p-6">
-          <div className="mb-6">
-            <h3 className="text-lg font-semibold text-gray-100 mb-3">💡 Try asking me...</h3>
-            <div className="space-y-3">
+        <div className="w-96 bg-professional-lightest border-r border-gray-200 p-8">
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-professional-black mb-6">💡 Try asking me...</h3>
+            <div className="space-y-4">
               {examplePrompts.map((prompt, index) => (
                 <button
                   key={index}
                   onClick={() => handlePromptClick(prompt)}
-                  className="w-full text-left p-4 bg-gray-600 rounded-lg hover:bg-gray-500 hover:border-yellow-600/30 border border-gray-500 transition-all text-sm text-gray-300 hover:text-gray-100 shadow-sm hover:shadow-md"
+                  className="w-full text-left p-6 bg-white border border-gray-300 rounded-sm hover:bg-gray-50 hover:border-professional-black transition-all duration-200 text-sm text-professional-black shadow-professional hover:shadow-professional-lg"
                 >
-                  <Sparkles className="w-4 h-4 inline mr-2 text-yellow-600" />
+                  <Sparkles className="w-5 h-5 inline mr-3 text-professional-medium" />
                   {prompt}
                 </button>
               ))}
             </div>
           </div>
 
-          <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
-            <h4 className="font-medium text-blue-400 mb-2">💡 Tips for better responses:</h4>
-            <ul className="text-sm text-blue-300 space-y-1">
+          <div className="bg-white border border-gray-300 rounded-sm p-6 shadow-professional">
+            <h4 className="font-semibold text-professional-black mb-4">💡 Tips for better responses:</h4>
+            <ul className="text-sm text-professional-medium space-y-2">
               <li>• Be specific about your major and year</li>
               <li>• Mention specific courses you're considering</li>
               <li>• Ask about prerequisites and scheduling</li>
@@ -137,34 +137,34 @@ const AIAssistant: React.FC = () => {
         {/* Chat Area */}
         <div className="flex-1 flex flex-col">
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-4">
+          <div className="flex-1 overflow-y-auto p-8 space-y-6">
             {messages.map((message) => (
               <div
                 key={message.id}
                 className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
               >
-                <div className={`flex items-start space-x-3 max-w-2xl ${
+                <div className={`flex items-start space-x-4 max-w-3xl ${
                   message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''
                 }`}>
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                  <div className={`w-12 h-12 rounded-sm flex items-center justify-center ${
                     message.sender === 'user' 
-                      ? 'bg-blue-500' 
-                      : 'bg-yellow-500'
+                      ? 'bg-professional-dark' 
+                      : 'bg-professional-black'
                   }`}>
                     {message.sender === 'user' ? (
-                      <User className="w-5 h-5 text-white" />
+                      <User className="w-6 h-6 text-white" />
                     ) : (
-                      <Bot className="w-5 h-5 text-gray-900" />
+                      <Bot className="w-6 h-6 text-white" />
                     )}
                   </div>
-                  <div className={`rounded-lg p-4 ${
+                  <div className={`rounded-sm p-6 shadow-professional ${
                     message.sender === 'user'
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-gray-700 border border-gray-600 text-gray-100 shadow-sm'
+                      ? 'bg-professional-dark text-white'
+                      : 'bg-white border border-gray-200 text-professional-black'
                   }`}>
-                    <p className="text-sm">{message.text}</p>
-                    <p className={`text-xs mt-2 ${
-                      message.sender === 'user' ? 'text-blue-100' : 'text-gray-400'
+                    <p className="text-sm leading-relaxed">{message.text}</p>
+                    <p className={`text-xs mt-3 ${
+                      message.sender === 'user' ? 'text-gray-200' : 'text-professional-medium'
                     }`}>
                       {message.timestamp.toLocaleTimeString()}
                     </p>
@@ -175,15 +175,15 @@ const AIAssistant: React.FC = () => {
             
             {isTyping && (
               <div className="flex justify-start">
-                <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center shadow-md">
-                    <Bot className="w-5 h-5 text-gray-800" />
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-professional-black rounded-sm flex items-center justify-center">
+                    <Bot className="w-6 h-6 text-white" />
                   </div>
-                  <div className="bg-gray-700 border border-gray-600 rounded-lg p-4 shadow-sm">
+                  <div className="bg-white border border-gray-200 rounded-sm p-6 shadow-professional">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-2 h-2 bg-professional-medium rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-professional-medium rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                      <div className="w-2 h-2 bg-professional-medium rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                     </div>
                   </div>
                 </div>
@@ -192,22 +192,22 @@ const AIAssistant: React.FC = () => {
           </div>
 
           {/* Input Area */}
-          <div className="border-t border-gray-600 bg-gray-700 p-6">
-            <div className="flex space-x-4">
+          <div className="border-t border-gray-200 bg-professional-lightest p-8">
+            <div className="flex space-x-6">
               <input
                 type="text"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                 placeholder="Ask me anything about your academic journey..."
-                className="flex-1 border border-gray-500 bg-gray-600 text-gray-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent placeholder-gray-400 shadow-sm"
+                className="flex-1 border border-gray-300 bg-white text-professional-black rounded-sm px-6 py-4 focus:outline-none focus:ring-2 focus:ring-professional-black focus:border-transparent placeholder-professional-medium shadow-professional text-base"
               />
               <button
                 onClick={handleSendMessage}
                 disabled={!inputText.trim()}
-                className="bg-yellow-600 text-gray-800 px-6 py-3 rounded-lg hover:bg-yellow-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 shadow-md"
+                className="bg-professional-black text-white px-8 py-4 rounded-sm hover:bg-professional-dark transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-3 shadow-professional font-medium"
               >
-                <Send className="w-5 h-5" />
+                <Send className="w-6 h-6" />
                 <span>Send</span>
               </button>
             </div>

@@ -25,19 +25,19 @@ const TopNavigation: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-gray-800 border-b border-gray-700 shadow-lg">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-16">
+    <nav className="bg-white border-b border-gray-200 shadow-professional">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/dashboard" className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-yellow-600 rounded-lg flex items-center justify-center shadow-md">
-              <GraduationCap className="w-5 h-5 text-gray-800" />
+            <div className="w-10 h-10 bg-professional-black rounded-sm flex items-center justify-center">
+              <GraduationCap className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-100">Boiler AI</span>
+            <span className="text-2xl font-semibold text-professional-black tracking-tight">Boiler AI</span>
           </Link>
 
           {/* Navigation Menu */}
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-2">
             {menuItems.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.path;
@@ -46,20 +46,20 @@ const TopNavigation: React.FC = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                  className={`flex items-center space-x-2 px-6 py-3 rounded-sm transition-all duration-200 font-medium ${
                     item.featured
                       ? isActive
-                        ? 'bg-yellow-600 text-gray-800 shadow-md'
-                        : 'bg-yellow-600/10 text-yellow-400 hover:bg-yellow-600/20 border border-yellow-600/30'
+                        ? 'bg-professional-black text-white shadow-professional'
+                        : 'bg-professional-lightest text-professional-black hover:bg-gray-200 border border-gray-300'
                       : isActive 
-                        ? 'bg-gray-700 text-gray-100 shadow-sm' 
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-gray-100'
+                        ? 'bg-professional-dark text-white shadow-professional' 
+                        : 'text-professional-medium hover:bg-professional-lightest hover:text-professional-black'
                   }`}
                 >
-                  <Icon className="w-4 h-4" />
-                  <span className="text-sm font-medium">{item.label}</span>
+                  <Icon className="w-5 h-5" />
+                  <span className="text-sm">{item.label}</span>
                   {item.featured && (
-                    <span className="bg-yellow-700 text-gray-100 text-xs px-1.5 py-0.5 rounded-full font-semibold shadow-sm">
+                    <span className="bg-professional-black text-white text-xs px-2 py-1 rounded-sm font-semibold">
                       AI
                     </span>
                   )}
@@ -71,11 +71,11 @@ const TopNavigation: React.FC = () => {
           {/* User Profile */}
           <div className="flex items-center space-x-3">
             <div className="text-right">
-              <p className="text-sm font-medium text-gray-100">John Doe</p>
-              <p className="text-xs text-gray-400">CS • Junior</p>
+              <p className="text-sm font-medium text-professional-black">John Doe</p>
+              <p className="text-xs text-professional-medium">CS • Junior</p>
             </div>
-            <div className="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center shadow-md">
-              <span className="text-sm font-bold text-gray-800">JD</span>
+            <div className="w-10 h-10 bg-professional-black rounded-sm flex items-center justify-center">
+              <span className="text-sm font-semibold text-white">JD</span>
             </div>
           </div>
         </div>
