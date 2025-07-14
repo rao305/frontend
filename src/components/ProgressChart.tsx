@@ -20,9 +20,9 @@ const ProgressChart: React.FC = () => {
             <div className="flex-1">
               <div className="flex items-center justify-between mb-1">
                 <span className="text-sm text-gray-400">{req.completed}/{req.total} credits</span>
-                <span className="text-sm font-medium text-white">{percentage.toFixed(0)}%</span>
+                <span className="text-sm font-medium text-gray-100">{percentage.toFixed(0)}%</span>
               </div>
-              <div className="w-full bg-gray-700 rounded-full h-2">
+              <div className="w-full bg-gray-600 rounded-full h-2">
                 <div
                   className={`h-2 rounded-full ${req.color} transition-all duration-300`}
                   style={{ width: `${percentage}%` }}

@@ -27,10 +27,10 @@ const CourseCard: React.FC<CourseCardProps> = ({
   };
 
   return (
-    <div className="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition-colors bg-gray-800/50">
+    <div className="border border-gray-600 rounded-lg p-4 hover:bg-gray-700 transition-colors bg-gray-700/50 shadow-sm">
       <div className="flex items-start justify-between mb-2">
         <div>
-          <h3 className="font-semibold text-white">{code}</h3>
+          <h3 className="font-semibold text-gray-100">{code}</h3>
           <p className="text-sm text-gray-300">{title}</p>
         </div>
         {grade && (

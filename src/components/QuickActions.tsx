@@ -31,8 +31,8 @@ const QuickActions: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-900 rounded-lg border border-gray-800 p-6">
-      <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
+    <div className="bg-gray-800 rounded-lg border border-gray-700 p-6 shadow-lg">
+      <h3 className="text-lg font-semibold text-gray-100 mb-4">Quick Actions</h3>
       <div className="grid grid-cols-2 gap-3">
         {actions.map((action, index) => {
           const Icon = action.icon;
@@ -40,7 +40,7 @@ const QuickActions: React.FC = () => {
             <Link
               key={index}
               to={action.path}
-              className={`flex flex-col items-center space-y-2 p-4 rounded-lg text-white transition-colors ${action.color}`}
+              className={`flex flex-col items-center space-y-2 p-4 rounded-lg text-gray-100 transition-colors shadow-md ${action.color}`}
             >
               <Icon className="w-6 h-6" />
               <span className="text-sm font-medium text-center">{action.label}</span>

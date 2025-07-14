@@ -18,11 +18,11 @@ const StatCard: React.FC<StatCardProps> = ({ title, value, change, icon: Icon, c
   };
 
   return (
-    <div className="bg-gray-900 rounded-lg border border-gray-800 p-6">
+    <div className="bg-gray-800 rounded-lg border border-gray-700 p-6 shadow-lg">
       <div className="flex items-center justify-between">
         <div>
           <p className="text-sm font-medium text-gray-400 mb-1">{title}</p>
-          <p className="text-3xl font-bold text-white">{value}</p>
+          <p className="text-3xl font-bold text-gray-100">{value}</p>
           <p className="text-sm text-gray-500 mt-1">{change}</p>
         </div>
         <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${colorClasses[color]}`}>
