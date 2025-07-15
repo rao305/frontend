@@ -13,20 +13,20 @@ const AIWidget: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white border border-gray-200 rounded-sm p-6 shadow-professional">
+    <div className="bg-purdue-black border border-purdue-medium p-6">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-3">
-          <div className="w-12 h-12 bg-professional-black rounded-sm flex items-center justify-center">
-            <Bot className="w-6 h-6 text-white" />
+          <div className="w-10 h-10 bg-purdue-gold flex items-center justify-center">
+            <Bot className="w-5 h-5 text-purdue-black" />
           </div>
           <div>
-            <h3 className="font-semibold text-professional-black text-lg">AI Assistant</h3>
-            <p className="text-sm text-professional-medium">Ask me anything!</p>
+            <h3 className="font-medium text-purdue-gold text-base">AI Assistant</h3>
+            <p className="text-sm text-purdue-light">Ask me anything!</p>
           </div>
         </div>
         <Link
           to="/ai-assistant"
-          className="text-professional-black hover:text-professional-medium text-sm font-medium transition-colors duration-200"
+          className="text-purdue-gold hover:text-purdue-light text-sm font-medium transition-colors duration-200"
         >
           Open Chat
         </Link>
@@ -34,12 +34,12 @@ const AIWidget: React.FC = () => {
 
       {!isExpanded ? (
         <div className="space-y-3">
-          <p className="text-sm font-medium text-professional-medium uppercase tracking-wide mb-4">Quick questions:</p>
+          <p className="text-xs font-medium text-purdue-light uppercase tracking-wide mb-4">Quick questions:</p>
           {quickQuestions.map((question, index) => (
             <button
               key={index}
               onClick={() => setIsExpanded(true)}
-              className="w-full text-left text-sm text-professional-black p-4 rounded-sm bg-professional-lightest hover:bg-gray-200 transition-all duration-200 border border-gray-300 shadow-professional"
+              className="w-full text-left text-sm text-purdue-gold p-3 bg-purdue-medium hover:bg-purdue-light transition-all duration-200 border border-purdue-light"
             >
               {question}
             </button>

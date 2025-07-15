@@ -8,31 +8,31 @@ const QuickActions: React.FC = () => {
       icon: Search,
       label: 'Search Courses',
       path: '/courses',
-      color: 'bg-professional-black hover:bg-professional-dark',
+      color: 'bg-purdue-gold text-purdue-black hover:bg-purdue-light',
     },
     {
       icon: FileText,
       label: 'Upload Transcript',
       path: '/transcript',
-      color: 'bg-professional-dark hover:bg-professional-black',
+      color: 'bg-purdue-medium text-purdue-gold hover:bg-purdue-light',
     },
     {
       icon: GraduationCap,
       label: 'Degree Audit',
       path: '/degree-audit',
-      color: 'bg-professional-medium hover:bg-professional-dark',
+      color: 'bg-purdue-light text-purdue-gold hover:bg-purdue-medium',
     },
     {
       icon: Calendar,
       label: 'Plan Semester',
       path: '/planner',
-      color: 'bg-professional-light hover:bg-professional-medium',
+      color: 'bg-purdue-black text-purdue-gold border border-purdue-medium hover:bg-purdue-medium',
     },
   ];
 
   return (
-    <div className="bg-white border border-gray-200 rounded-sm p-6 shadow-professional">
-      <h3 className="text-lg font-semibold text-professional-black mb-6">Quick Actions</h3>
+    <div className="bg-purdue-black border border-purdue-medium p-6">
+      <h3 className="text-base font-medium text-purdue-gold mb-4">Quick Actions</h3>
       <div className="grid grid-cols-2 gap-4">
         {actions.map((action, index) => {
           const Icon = action.icon;
@@ -40,9 +40,9 @@ const QuickActions: React.FC = () => {
             <Link
               key={index}
               to={action.path}
-              className={`flex flex-col items-center space-y-3 p-6 rounded-sm text-white transition-all duration-200 shadow-professional hover:shadow-professional-lg ${action.color}`}
+              className={`flex flex-col items-center space-y-2 p-4 transition-all duration-200 ${action.color}`}
             >
-              <Icon className="w-7 h-7" />
+              <Icon className="w-5 h-5" />
               <span className="text-sm font-medium text-center leading-tight">{action.label}</span>
             </Link>
           );

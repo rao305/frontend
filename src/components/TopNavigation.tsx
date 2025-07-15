@@ -25,19 +25,19 @@ const TopNavigation: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-white border-b border-gray-200 shadow-professional">
+    <nav className="bg-purdue-black border-b border-purdue-medium">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/dashboard" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-professional-black rounded-sm flex items-center justify-center">
-              <GraduationCap className="w-6 h-6 text-white" />
+            <div className="w-8 h-8 bg-purdue-gold flex items-center justify-center">
+              <GraduationCap className="w-5 h-5 text-purdue-black" />
             </div>
-            <span className="text-2xl font-semibold text-professional-black tracking-tight">Boiler AI</span>
+            <span className="text-xl font-medium text-purdue-gold tracking-tight">Boiler AI</span>
           </Link>
 
           {/* Navigation Menu */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1">
             {menuItems.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.path;
@@ -46,23 +46,18 @@ const TopNavigation: React.FC = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-sm transition-all duration-200 font-medium ${
+                  className={`flex items-center space-x-2 px-4 py-2 transition-all duration-200 font-medium ${
                     item.featured
                       ? isActive
-                        ? 'bg-professional-black text-white shadow-professional'
-                        : 'bg-professional-lightest text-professional-black hover:bg-gray-200 border border-gray-300'
+                        ? 'bg-purdue-gold text-purdue-black'
+                        : 'text-purdue-gold hover:bg-purdue-medium'
                       : isActive 
-                        ? 'bg-professional-dark text-white shadow-professional' 
-                        : 'text-professional-medium hover:bg-professional-lightest hover:text-professional-black'
+                        ? 'bg-purdue-medium text-purdue-gold' 
+                        : 'text-purdue-gold hover:bg-purdue-medium'
                   }`}
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon className="w-4 h-4" />
                   <span className="text-sm">{item.label}</span>
-                  {item.featured && (
-                    <span className="bg-professional-black text-white text-xs px-2 py-1 rounded-sm font-semibold">
-                      AI
-                    </span>
-                  )}
                 </Link>
               );
             })}
@@ -71,11 +66,11 @@ const TopNavigation: React.FC = () => {
           {/* User Profile */}
           <div className="flex items-center space-x-3">
             <div className="text-right">
-              <p className="text-sm font-medium text-professional-black">John Doe</p>
-              <p className="text-xs text-professional-medium">CS • Junior</p>
+              <p className="text-sm font-medium text-purdue-gold">John Doe</p>
+              <p className="text-xs text-purdue-light">CS • Junior</p>
             </div>
-            <div className="w-10 h-10 bg-professional-black rounded-sm flex items-center justify-center">
-              <span className="text-sm font-semibold text-white">JD</span>
+            <div className="w-8 h-8 bg-purdue-gold flex items-center justify-center">
+              <span className="text-sm font-semibold text-purdue-black">JD</span>
             </div>
           </div>
         </div>

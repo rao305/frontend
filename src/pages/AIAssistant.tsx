@@ -78,24 +78,24 @@ const AIAssistant: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white rounded-sm border border-gray-200 shadow-professional-xl">
+    <div className="min-h-screen flex flex-col bg-purdue-black border border-purdue-medium">
       {/* Header */}
-      <div className="bg-professional-black text-white p-12 rounded-t-sm">
+      <div className="bg-purdue-black border-b border-purdue-medium p-8">
         <div className="flex items-center space-x-3">
-          <div className="w-20 h-20 bg-white rounded-sm flex items-center justify-center">
-            <Bot className="w-10 h-10 text-professional-black" />
+          <div className="w-16 h-16 bg-purdue-gold flex items-center justify-center">
+            <Bot className="w-8 h-8 text-purdue-black" />
           </div>
           <div>
-            <h1 className="text-5xl font-light tracking-tight mb-3">Boiler AI Assistant</h1>
-            <p className="text-gray-300 text-xl font-light">Your intelligent academic advisor and course planning companion</p>
-            <div className="flex items-center space-x-6 mt-6">
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-sm text-sm font-medium">
+            <h1 className="text-3xl font-light tracking-tight mb-2 text-purdue-gold">Boiler AI Assistant</h1>
+            <p className="text-purdue-light text-base font-light">Your intelligent academic advisor and course planning companion</p>
+            <div className="flex items-center space-x-4 mt-4">
+              <span className="bg-purdue-medium px-3 py-1 text-xs font-medium text-purdue-gold">
                 🎓 Academic Planning
               </span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-sm text-sm font-medium">
+              <span className="bg-purdue-medium px-3 py-1 text-xs font-medium text-purdue-gold">
                 📚 Course Recommendations
               </span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-sm text-sm font-medium">
+              <span className="bg-purdue-medium px-3 py-1 text-xs font-medium text-purdue-gold">
                 🔄 CODO Guidance
               </span>
             </div>

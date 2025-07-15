@@ -19,29 +19,29 @@ import AIWidget from '../components/AIWidget';
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       {/* Header */}
-      <div className="bg-white border border-gray-200 rounded-sm p-8 shadow-professional">
+      <div className="bg-purdue-black border border-purdue-medium p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-4xl font-semibold text-professional-black tracking-tight mb-2">Welcome back, John</h1>
-            <p className="text-professional-medium text-lg">Computer Science • Junior • Spring 2025</p>
+            <h1 className="text-3xl font-medium text-purdue-gold tracking-tight mb-2">Welcome back, John</h1>
+            <p className="text-purdue-light text-base">Computer Science • Junior • Spring 2025</p>
           </div>
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-6">
             <div className="text-right">
-              <p className="text-sm font-medium text-professional-medium uppercase tracking-wide">Current GPA</p>
-              <p className="text-3xl font-light text-professional-black">3.72</p>
+              <p className="text-xs font-medium text-purdue-light uppercase tracking-wide">Current GPA</p>
+              <p className="text-2xl font-light text-purdue-gold">3.72</p>
             </div>
             <div className="text-right">
-              <p className="text-sm font-medium text-professional-medium uppercase tracking-wide">Credits Completed</p>
-              <p className="text-3xl font-light text-professional-black">89/120</p>
+              <p className="text-xs font-medium text-purdue-light uppercase tracking-wide">Credits Completed</p>
+              <p className="text-2xl font-light text-purdue-gold">89/120</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
           title="Current Courses"
           value="5"
@@ -72,16 +72,16 @@ const Dashboard: React.FC = () => {
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main Content */}
-        <div className="lg:col-span-2 space-y-8">
+        <div className="lg:col-span-2 space-y-6">
           {/* Current Courses */}
-          <div className="bg-white border border-gray-200 rounded-sm p-8 shadow-professional">
+          <div className="bg-purdue-black border border-purdue-medium p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-semibold text-professional-black">Current Courses</h2>
-              <span className="text-sm font-medium text-professional-medium uppercase tracking-wide">Spring 2025</span>
+              <h2 className="text-xl font-medium text-purdue-gold">Current Courses</h2>
+              <span className="text-xs font-medium text-purdue-light uppercase tracking-wide">Spring 2025</span>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-4">
               <CourseCard
                 code="CS 25000"
                 title="Computer Architecture"

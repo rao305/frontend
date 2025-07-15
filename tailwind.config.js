@@ -7,19 +7,18 @@ export default {
         'sans': ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       colors: {
-        'professional': {
+        'purdue': {
           'black': '#000000',
-          'dark': '#333333',
-          'medium': '#666666',
-          'light': '#999999',
-          'lighter': '#CCCCCC',
-          'lightest': '#F5F5F5',
+          'gold': '#CEB888',
+          'dark-bg': '#1A1A1A',
+          'medium': '#333333',
+          'light': '#666666',
         }
       },
       boxShadow: {
-        'professional': '0 2px 8px rgba(0, 0, 0, 0.1)',
-        'professional-lg': '0 4px 16px rgba(0, 0, 0, 0.15)',
-        'professional-xl': '0 8px 32px rgba(0, 0, 0, 0.2)',
+        'purdue': '0 2px 8px rgba(0, 0, 0, 0.3)',
+        'purdue-lg': '0 4px 16px rgba(0, 0, 0, 0.4)',
+        'purdue-xl': '0 8px 32px rgba(0, 0, 0, 0.5)',
       }
     },
   },

@@ -14,9 +14,9 @@ function App() {
   return (
     <UserProvider>
       <Router>
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-purdue-dark-bg">
           <TopNavigation />
-          <main className="max-w-7xl mx-auto px-8 py-12">
+          <main className="max-w-7xl mx-auto px-8 py-8">
             <Routes>
               <Route path="/" element={<AIAssistant />} />
               <Route path="/dashboard" element={<Dashboard />} />
