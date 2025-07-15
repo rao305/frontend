@@ -9,7 +9,7 @@ export default {
       colors: {
         'purdue': {
           'black': '#000000',
-          'gold': '#CEB888',
+          'gold': '#FFD700',
           'dark-bg': '#1A1A1A',
           'medium': '#333333',
           'light': '#666666',

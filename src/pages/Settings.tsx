@@ -7,8 +7,8 @@ const Settings: React.FC = () => {
     <div className="max-w-4xl mx-auto">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Settings</h1>
-        <p className="text-gray-600 mt-2">Manage your account and application preferences</p>
+        <h1 className="text-3xl font-bold text-purdue-gold">Settings</h1>
+        <p className="text-purdue-gold opacity-80 mt-2">Manage your account and application preferences</p>
       </div>
 
       <div className="space-y-6">
@@ -179,7 +179,7 @@ const Settings: React.FC = () => {
 
         {/* Save Button */}
         <div className="flex justify-end pt-6">
-          <button className="bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg hover:bg-yellow-600 transition-colors font-medium">
+          <button className="bg-purdue-gold text-purdue-black px-6 py-3 hover:opacity-90 transition-colors font-medium">
             Save Changes
           </button>
         </div>

@@ -72,27 +72,27 @@ const RequirementsList: React.FC<RequirementsListProps> = ({ title, type }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
+    <div className="bg-purdue-black border border-purdue-gold p-6">
+      <h3 className="text-lg font-semibold text-purdue-gold mb-4">{title}</h3>
       
       <div className="space-y-3">
         {requirements.map((req, index) => (
-          <div key={index} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
+          <div key={index} className="flex items-center justify-between p-3 border border-purdue-gold">
             <div className="flex items-center space-x-3">
               {getStatusIcon(req.status)}
               <div>
-                <p className="font-medium text-gray-900">{req.code}</p>
-                <p className="text-sm text-gray-600">{req.title}</p>
+                <p className="font-medium text-purdue-gold">{req.code}</p>
+                <p className="text-sm text-purdue-gold opacity-80">{req.title}</p>
               </div>
             </div>
             
             <div className="text-right">
               {req.grade ? (
-                <span className={`font-semibold ${getGradeColor(req.grade)}`}>
+                <span className="font-semibold text-purdue-gold">
                   {req.grade}
                 </span>
               ) : (
-                <span className="text-sm text-gray-500 capitalize">
+                <span className="text-sm text-purdue-gold opacity-60 capitalize">
                   {req.status}
                 </span>
               )}

@@ -15,14 +15,14 @@ const SettingsSection: React.FC<SettingsSectionProps> = ({
   children 
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6">
+    <div className="bg-purdue-black border border-purdue-gold p-6">
       <div className="flex items-center space-x-3 mb-4">
-        <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
-          <Icon className="w-5 h-5 text-gray-600" />
+        <div className="w-10 h-10 bg-purdue-gold flex items-center justify-center">
+          <Icon className="w-5 h-5 text-purdue-black" />
         </div>
         <div>
-          <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
-          <p className="text-sm text-gray-600">{description}</p>
+          <h2 className="text-lg font-semibold text-purdue-gold">{title}</h2>
+          <p className="text-sm text-purdue-gold opacity-80">{description}</p>
         </div>
       </div>
       {children}

@@ -76,38 +76,38 @@ const DegreeProgress: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6">
-      <h2 className="text-xl font-bold text-gray-900 mb-6">Degree Progress Overview</h2>
+    <div className="bg-purdue-black border border-purdue-gold p-6">
+      <h2 className="text-xl font-bold text-purdue-gold mb-6">Degree Progress Overview</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {categories.map((category, index) => {
           const percentage = (category.completed / category.total) * 100;
           
           return (
-            <div key={index} className="border border-gray-200 rounded-lg p-4">
+            <div key={index} className="border border-purdue-gold p-4">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-semibold text-gray-900">{category.name}</h3>
+                <h3 className="font-semibold text-purdue-gold">{category.name}</h3>
                 {getStatusIcon(category.status)}
               </div>
               
               <div className="mb-3">
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-sm text-gray-600">
+                  <span className="text-sm text-purdue-gold opacity-80">
                     {category.completed}/{category.total} credits
                   </span>
-                  <span className="text-sm font-medium text-gray-900">
+                  <span className="text-sm font-medium text-purdue-gold">
                     {percentage.toFixed(0)}%
                   </span>
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
+                <div className="w-full bg-purdue-medium h-2">
                   <div
-                    className={`h-2 rounded-full transition-all duration-300 ${getProgressColor(category.status)}`}
+                    className="h-2 bg-purdue-gold transition-all duration-300"
                     style={{ width: `${percentage}%` }}
                   ></div>
                 </div>
               </div>
               
-              <div className="text-xs text-gray-500">
+              <div className="text-xs text-purdue-gold opacity-60">
                 Recent: {category.courses.slice(-2).join(', ')}
               </div>
             </div>

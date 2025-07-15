@@ -6,26 +6,19 @@ interface StatCardProps {
   value: string;
   change: string;
   icon: LucideIcon;
-  color: 'dark' | 'medium' | 'light';
 }
 
-const StatCard: React.FC<StatCardProps> = ({ title, value, change, icon: Icon, color }) => {
-  const colorClasses = {
-    dark: 'bg-purdue-gold text-purdue-black',
-    medium: 'bg-purdue-medium text-purdue-gold',
-    light: 'bg-purdue-light text-purdue-gold',
-  };
-
+const StatCard: React.FC<StatCardProps> = ({ title, value, change, icon: Icon }) => {
   return (
-    <div className="bg-purdue-black border border-purdue-medium p-6 hover:border-purdue-gold transition-all duration-200">
+    <div className="bg-purdue-black border border-purdue-gold p-6 hover:border-purdue-gold hover:shadow-lg transition-all duration-200">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-xs font-medium text-purdue-light uppercase tracking-wide mb-2">{title}</p>
+          <p className="text-xs font-medium text-purdue-gold uppercase tracking-wide mb-2 opacity-80">{title}</p>
           <p className="text-3xl font-light text-purdue-gold mb-1">{value}</p>
-          <p className="text-sm text-purdue-light">{change}</p>
+          <p className="text-sm text-purdue-gold opacity-80">{change}</p>
         </div>
-        <div className={`w-12 h-12 flex items-center justify-center ${colorClasses[color]}`}>
-          <Icon className="w-6 h-6" />
+        <div className="w-12 h-12 bg-purdue-gold flex items-center justify-center">
+          <Icon className="w-6 h-6 text-purdue-black" />
         </div>
       </div>
     </div>

@@ -18,43 +18,43 @@ const CourseSearch: React.FC = () => {
   );
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">Add Courses</h3>
+    <div className="bg-purdue-black border border-purdue-gold p-6">
+      <h3 className="text-lg font-semibold text-purdue-gold mb-4">Add Courses</h3>
       
       <div className="relative mb-4">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-purdue-gold w-4 h-4" />
         <input
           type="text"
           placeholder="Search courses..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-sm"
+          className="w-full pl-10 pr-4 py-2 border border-purdue-gold bg-purdue-black text-purdue-gold focus:outline-none focus:ring-2 focus:ring-purdue-gold focus:border-transparent text-sm placeholder-purdue-gold placeholder-opacity-60"
         />
       </div>
 
       <div className="space-y-2">
-        <h4 className="text-sm font-medium text-gray-700 mb-2">Suggested Courses</h4>
+        <h4 className="text-sm font-medium text-purdue-gold mb-2 opacity-80">Suggested Courses</h4>
         {filteredCourses.map((course, index) => (
           <div
             key={index}
             className={`p-3 rounded-lg border transition-colors ${
               course.available 
-                ? 'border-gray-200 hover:bg-gray-50 cursor-pointer' 
-                : 'border-gray-100 bg-gray-50 cursor-not-allowed opacity-60'
+                ? 'border-purdue-gold hover:bg-purdue-medium cursor-pointer' 
+                : 'border-purdue-gold bg-purdue-medium cursor-not-allowed opacity-60'
             }`}
           >
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <h5 className="font-medium text-gray-900 text-sm">{course.code}</h5>
-                <p className="text-xs text-gray-600">{course.title}</p>
-                <p className="text-xs text-gray-500">{course.credits} credits</p>
+                <h5 className="font-medium text-purdue-gold text-sm">{course.code}</h5>
+                <p className="text-xs text-purdue-gold opacity-80">{course.title}</p>
+                <p className="text-xs text-purdue-gold opacity-60">{course.credits} credits</p>
               </div>
               {course.available ? (
-                <button className="text-yellow-600 hover:text-yellow-700">
+                <button className="text-purdue-gold hover:opacity-80">
                   <Plus className="w-4 h-4" />
                 </button>
               ) : (
-                <span className="text-xs text-gray-400">Not available</span>
+                <span className="text-xs text-purdue-gold opacity-40">Not available</span>
               )}
             </div>
           </div>
