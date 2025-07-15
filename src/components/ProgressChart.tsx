@@ -16,15 +16,15 @@ const ProgressChart: React.FC = () => {
         
         return (
           <div key={index} className="flex items-center space-x-4">
-            <div className="w-28 text-sm font-medium text-purdue-gold">{req.name}</div>
+            <div className="w-28 text-sm font-medium text-minimal-text">{req.name}</div>
             <div className="flex-1">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-purdue-gold opacity-80">{req.completed}/{req.total} credits</span>
-                <span className="text-sm font-medium text-purdue-gold">{percentage.toFixed(0)}%</span>
+                <span className="text-sm text-minimal-text opacity-80">{req.completed}/{req.total} credits</span>
+                <span className="text-sm font-medium text-minimal-text">{percentage.toFixed(0)}%</span>
               </div>
-              <div className="w-full bg-purdue-medium h-2">
+              <div className="w-full bg-minimal-hover h-2 rounded-sm">
                 <div
-                  className="h-2 bg-purdue-gold transition-all duration-500"
+                  className="h-2 bg-minimal-text transition-all duration-500 rounded-sm"
                   style={{ width: `${percentage}%` }}
                 ></div>
               </div>

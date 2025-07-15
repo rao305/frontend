@@ -14,7 +14,7 @@ function App() {
   return (
     <UserProvider>
       <Router>
-        <div className="min-h-screen bg-purdue-dark-bg">
+        <div className="min-h-screen bg-minimal-bg">
           <TopNavigation />
           <main className="max-w-7xl mx-auto px-8 py-8">
             <Routes>

@@ -78,24 +78,24 @@ const AIAssistant: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-purdue-dark-bg border border-purdue-gold">
+    <div className="min-h-screen flex flex-col bg-minimal-bg border border-minimal-border rounded-sm">
       {/* Header */}
-      <div className="bg-purdue-black border-b border-purdue-gold p-8">
+      <div className="bg-minimal-card border-b border-minimal-border p-8">
         <div className="flex items-center space-x-3">
-          <div className="w-16 h-16 bg-purdue-gold flex items-center justify-center">
-            <Bot className="w-8 h-8 text-purdue-black" />
+          <div className="w-16 h-16 bg-minimal-card border border-minimal-border flex items-center justify-center rounded-sm">
+            <Bot className="w-8 h-8 text-minimal-text" />
           </div>
           <div>
-            <h1 className="text-3xl font-light tracking-tight mb-2 text-purdue-gold">Boiler AI Assistant</h1>
-            <p className="text-purdue-gold opacity-80 text-base font-light">Your intelligent academic advisor and course planning companion</p>
+            <h1 className="text-3xl font-light tracking-tight mb-2 text-minimal-text">Boiler AI Assistant</h1>
+            <p className="text-minimal-text opacity-80 text-base font-light">Your intelligent academic advisor and course planning companion</p>
             <div className="flex items-center space-x-4 mt-4">
-              <span className="bg-purdue-black border border-purdue-gold px-3 py-1 text-xs font-medium text-purdue-gold">
+              <span className="bg-minimal-card border border-minimal-border px-3 py-1 text-xs font-medium text-minimal-text rounded-sm">
                 🎓 Academic Planning
               </span>
-              <span className="bg-purdue-black border border-purdue-gold px-3 py-1 text-xs font-medium text-purdue-gold">
+              <span className="bg-minimal-card border border-minimal-border px-3 py-1 text-xs font-medium text-minimal-text rounded-sm">
                 📚 Course Recommendations
               </span>
-              <span className="bg-purdue-black border border-purdue-gold px-3 py-1 text-xs font-medium text-purdue-gold">
+              <span className="bg-minimal-card border border-minimal-border px-3 py-1 text-xs font-medium text-minimal-text rounded-sm">
                 🔄 CODO Guidance
               </span>
             </div>
@@ -106,26 +106,26 @@ const AIAssistant: React.FC = () => {
       {/* Chat Container */}
       <div className="flex-1 flex">
         {/* Example Prompts Sidebar */}
-        <div className="w-96 bg-purdue-black border-r border-purdue-gold p-8">
+        <div className="w-96 bg-minimal-card border-r border-minimal-border p-8">
           <div className="mb-8">
-            <h3 className="text-xl font-semibold text-purdue-gold mb-6">💡 Try asking me...</h3>
+            <h3 className="text-xl font-semibold text-minimal-text mb-6">💡 Try asking me...</h3>
             <div className="space-y-4">
               {examplePrompts.map((prompt, index) => (
                 <button
                   key={index}
                   onClick={() => handlePromptClick(prompt)}
-                  className="w-full text-left p-6 bg-purdue-black border border-purdue-gold hover:bg-purdue-medium transition-all duration-200 text-sm text-purdue-gold"
+                  className="w-full text-left p-6 bg-minimal-card border border-minimal-border hover:bg-minimal-hover transition-all duration-200 text-sm text-minimal-text rounded-sm"
                 >
-                  <Sparkles className="w-5 h-5 inline mr-3 text-purdue-gold" />
+                  <Sparkles className="w-5 h-5 inline mr-3 text-minimal-text" />
                   {prompt}
                 </button>
               ))}
             </div>
           </div>
 
-          <div className="bg-purdue-black border border-purdue-gold p-6">
-            <h4 className="font-semibold text-purdue-gold mb-4">💡 Tips for better responses:</h4>
-            <ul className="text-sm text-purdue-gold opacity-80 space-y-2">
+          <div className="bg-minimal-card border border-minimal-border p-6 rounded-sm">
+            <h4 className="font-semibold text-minimal-text mb-4">💡 Tips for better responses:</h4>
+            <ul className="text-sm text-minimal-text opacity-80 space-y-2">
               <li>• Be specific about your major and year</li>
               <li>• Mention specific courses you're considering</li>
               <li>• Ask about prerequisites and scheduling</li>
@@ -148,23 +148,23 @@ const AIAssistant: React.FC = () => {
                 }`}>
                   <div className={`w-12 h-12 flex items-center justify-center ${
                     message.sender === 'user' 
-                      ? 'bg-purdue-medium' 
-                      : 'bg-purdue-gold'
+                      ? 'bg-minimal-hover border border-minimal-border' 
+                      : 'bg-minimal-card border border-minimal-border'
                   }`}>
                     {message.sender === 'user' ? (
-                      <User className="w-6 h-6 text-purdue-gold" />
+                      <User className="w-6 h-6 text-minimal-text" />
                     ) : (
-                      <Bot className="w-6 h-6 text-purdue-black" />
+                      <Bot className="w-6 h-6 text-minimal-text" />
                     )}
                   </div>
                   <div className={`p-6 ${
                     message.sender === 'user'
-                      ? 'bg-purdue-medium text-purdue-gold'
-                      : 'bg-purdue-black border border-purdue-gold text-purdue-gold'
+                      ? 'bg-minimal-hover text-minimal-text border border-minimal-border'
+                      : 'bg-minimal-card border border-minimal-border text-minimal-text'
                   }`}>
                     <p className="text-sm leading-relaxed">{message.text}</p>
                     <p className={`text-xs mt-3 ${
-                      message.sender === 'user' ? 'text-purdue-gold opacity-60' : 'text-purdue-gold opacity-60'
+                      message.sender === 'user' ? 'text-minimal-text opacity-60' : 'text-minimal-text opacity-60'
                     }`}>
                       {message.timestamp.toLocaleTimeString()}
                     </p>
@@ -176,14 +176,14 @@ const AIAssistant: React.FC = () => {
             {isTyping && (
               <div className="flex justify-start">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purdue-gold flex items-center justify-center">
-                    <Bot className="w-6 h-6 text-purdue-black" />
+                  <div className="w-12 h-12 bg-minimal-card border border-minimal-border flex items-center justify-center rounded-sm">
+                    <Bot className="w-6 h-6 text-minimal-text" />
                   </div>
-                  <div className="bg-purdue-black border border-purdue-gold p-6">
+                  <div className="bg-minimal-card border border-minimal-border p-6 rounded-sm">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-purdue-gold rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-purdue-gold rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-purdue-gold rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-2 h-2 bg-minimal-text rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-minimal-text rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                      <div className="w-2 h-2 bg-minimal-text rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                     </div>
                   </div>
                 </div>
@@ -192,7 +192,7 @@ const AIAssistant: React.FC = () => {
           </div>
 
           {/* Input Area */}
-          <div className="border-t border-purdue-gold bg-purdue-black p-8">
+          <div className="border-t border-minimal-border bg-minimal-card p-8">
             <div className="flex space-x-6">
               <input
                 type="text"
@@ -200,12 +200,12 @@ const AIAssistant: React.FC = () => {
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                 placeholder="Ask me anything about your academic journey..."
-                className="flex-1 border border-purdue-gold bg-purdue-black text-purdue-gold px-6 py-4 focus:outline-none focus:ring-2 focus:ring-purdue-gold focus:border-transparent placeholder-purdue-gold placeholder-opacity-60 text-base"
+                className="flex-1 border border-minimal-border bg-minimal-card text-minimal-text px-6 py-4 focus:outline-none focus:ring-1 focus:ring-minimal-border focus:border-minimal-border placeholder-minimal-text-light placeholder-opacity-60 text-base rounded-sm"
               />
               <button
                 onClick={handleSendMessage}
                 disabled={!inputText.trim()}
-                className="bg-purdue-gold text-purdue-black px-8 py-4 hover:opacity-90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-3 font-medium"
+                className="bg-minimal-card border border-minimal-border text-minimal-text px-8 py-4 hover:bg-minimal-hover transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-3 font-medium rounded-sm"
               >
                 <Send className="w-6 h-6" />
                 <span>Send</span>

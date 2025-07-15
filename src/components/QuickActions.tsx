@@ -27,8 +27,8 @@ const QuickActions: React.FC = () => {
   ];
 
   return (
-    <div className="bg-purdue-black border border-purdue-gold p-6">
-      <h3 className="text-base font-medium text-purdue-gold mb-4">Quick Actions</h3>
+    <div className="bg-minimal-card border border-minimal-border p-6 rounded-sm">
+      <h3 className="text-base font-medium text-minimal-text mb-4">Quick Actions</h3>
       <div className="grid grid-cols-2 gap-4">
         {actions.map((action, index) => {
           const Icon = action.icon;
@@ -36,7 +36,7 @@ const QuickActions: React.FC = () => {
             <Link
               key={index}
               to={action.path}
-              className="flex flex-col items-center space-y-2 p-4 bg-purdue-black border border-purdue-gold text-purdue-gold hover:bg-purdue-medium transition-all duration-200"
+              className="flex flex-col items-center space-y-2 p-4 bg-minimal-card border border-minimal-border text-minimal-text hover:bg-minimal-hover transition-all duration-200 rounded-sm"
             >
               <Icon className="w-5 h-5" />
               <span className="text-sm font-medium text-center leading-tight">{action.label}</span>

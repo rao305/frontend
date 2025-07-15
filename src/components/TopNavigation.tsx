@@ -25,15 +25,15 @@ const TopNavigation: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-purdue-black border-b border-purdue-gold">
+    <nav className="bg-minimal-bg border-b border-minimal-border">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/dashboard" className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-purdue-gold flex items-center justify-center">
-              <GraduationCap className="w-5 h-5 text-purdue-black" />
+            <div className="w-8 h-8 bg-minimal-card border border-minimal-border flex items-center justify-center rounded-sm">
+              <GraduationCap className="w-5 h-5 text-minimal-text" />
             </div>
-            <span className="text-xl font-medium text-purdue-gold tracking-tight">Boiler AI</span>
+            <span className="text-xl font-medium text-minimal-text tracking-tight">Boiler AI</span>
           </Link>
 
           {/* Navigation Menu */}
@@ -49,28 +49,28 @@ const TopNavigation: React.FC = () => {
                   className={`flex items-center space-x-2 px-4 py-2 transition-all duration-200 font-medium ${
                     item.featured
                       ? isActive
-                        ? 'bg-purdue-gold text-purdue-black'
-                        : 'text-purdue-gold hover:bg-purdue-medium'
+                        ? 'bg-minimal-hover text-minimal-text border border-minimal-border'
+                        : 'text-minimal-text hover:bg-minimal-hover border border-minimal-border'
                       : isActive 
-                        ? 'bg-purdue-medium text-purdue-gold' 
-                        : 'text-purdue-gold hover:bg-purdue-medium'
+                        ? 'bg-minimal-hover text-minimal-text border border-minimal-border' 
+                        : 'text-minimal-text hover:bg-minimal-hover border border-minimal-border'
                   }`}
                 >
                   <Icon className="w-4 h-4" />
                   <span className="text-sm">{item.label}</span>
                 </Link>
-              );
+                    <span className="bg-minimal-card text-minimal-text text-xs px-2 py-0.5 rounded-sm font-medium border border-minimal-border">
             })}
           </div>
 
           {/* User Profile */}
           <div className="flex items-center space-x-3">
             <div className="text-right">
-              <p className="text-sm font-medium text-purdue-gold">John Doe</p>
-              <p className="text-xs text-purdue-light">CS • Junior</p>
+              <p className="text-sm font-medium text-minimal-text">John Doe</p>
+              <p className="text-xs text-minimal-text-light">CS • Junior</p>
             </div>
-            <div className="w-8 h-8 bg-purdue-gold flex items-center justify-center">
-              <span className="text-sm font-semibold text-purdue-black">JD</span>
+            <div className="w-8 h-8 bg-minimal-card border border-minimal-border flex items-center justify-center rounded-sm">
+              <span className="text-sm font-semibold text-minimal-text">JD</span>
             </div>
           </div>
         </div>

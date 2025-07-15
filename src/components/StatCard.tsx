@@ -10,15 +10,15 @@ interface StatCardProps {
 
 const StatCard: React.FC<StatCardProps> = ({ title, value, change, icon: Icon }) => {
   return (
-    <div className="bg-purdue-black border border-purdue-gold p-6 hover:border-purdue-gold hover:shadow-lg transition-all duration-200">
+    <div className="bg-minimal-card border border-minimal-border p-6 hover:bg-minimal-hover hover:shadow-sm transition-all duration-200 rounded-sm">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-xs font-medium text-purdue-gold uppercase tracking-wide mb-2 opacity-80">{title}</p>
-          <p className="text-3xl font-light text-purdue-gold mb-1">{value}</p>
-          <p className="text-sm text-purdue-gold opacity-80">{change}</p>
+          <p className="text-xs font-medium text-minimal-text uppercase tracking-wide mb-2 opacity-80">{title}</p>
+          <p className="text-3xl font-light text-minimal-text mb-1">{value}</p>
+          <p className="text-sm text-minimal-text opacity-80">{change}</p>
         </div>
-        <div className="w-12 h-12 bg-purdue-gold flex items-center justify-center">
-          <Icon className="w-6 h-6 text-purdue-black" />
+        <div className="w-12 h-12 bg-minimal-card border border-minimal-border flex items-center justify-center rounded-sm">
+          <Icon className="w-6 h-6 text-minimal-text" />
         </div>
       </div>
     </div>

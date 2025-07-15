@@ -7,12 +7,13 @@ export default {
         'sans': ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       colors: {
-        'purdue': {
-          'black': '#000000',
-          'gold': '#FFD700',
-          'dark-bg': '#1A1A1A',
-          'medium': '#333333',
-          'light': '#666666',
+        'minimal': {
+          'bg': '#F5F5F5',
+          'card': '#F5F5F5',
+          'border': '#E0E0E0',
+          'text': '#666666',
+          'text-light': '#999999',
+          'hover': '#EEEEEE',
         }
       },
       boxShadow: {

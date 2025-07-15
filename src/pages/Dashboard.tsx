@@ -21,20 +21,20 @@ const Dashboard: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-purdue-black border border-purdue-gold p-6">
+      <div className="bg-minimal-card border border-minimal-border p-6 rounded-sm">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-medium text-purdue-gold tracking-tight mb-2">Welcome back, John</h1>
-            <p className="text-purdue-gold text-base opacity-80">Computer Science • Junior • Spring 2025</p>
+            <h1 className="text-3xl font-medium text-minimal-text tracking-tight mb-2">Welcome back, John</h1>
+            <p className="text-minimal-text text-base opacity-80">Computer Science • Junior • Spring 2025</p>
           </div>
           <div className="flex items-center space-x-6">
             <div className="text-right">
-              <p className="text-xs font-medium text-purdue-gold uppercase tracking-wide opacity-80">Current GPA</p>
-              <p className="text-2xl font-light text-purdue-gold">3.72</p>
+              <p className="text-xs font-medium text-minimal-text uppercase tracking-wide opacity-80">Current GPA</p>
+              <p className="text-2xl font-light text-minimal-text">3.72</p>
             </div>
             <div className="text-right">
-              <p className="text-xs font-medium text-purdue-gold uppercase tracking-wide opacity-80">Credits Completed</p>
-              <p className="text-2xl font-light text-purdue-gold">89/120</p>
+              <p className="text-xs font-medium text-minimal-text uppercase tracking-wide opacity-80">Credits Completed</p>
+              <p className="text-2xl font-light text-minimal-text">89/120</p>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@ const Dashboard: React.FC = () => {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
-          title="Current Courses"
+          <div className="bg-minimal-card border border-minimal-border p-6 rounded-sm">
           value="5"
           change="+1 from last semester"
           icon={BookOpen}
@@ -74,8 +74,8 @@ const Dashboard: React.FC = () => {
           {/* Current Courses */}
           <div className="bg-purdue-black border border-purdue-gold p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-medium text-purdue-gold">Current Courses</h2>
-              <span className="text-xs font-medium text-purdue-gold uppercase tracking-wide opacity-80">Spring 2025</span>
+              <h2 className="text-xl font-medium text-minimal-text">Current Courses</h2>
+              <span className="text-xs font-medium text-minimal-text uppercase tracking-wide opacity-80">Spring 2025</span>
             </div>
             <div className="space-y-4">
               <CourseCard
@@ -122,38 +122,38 @@ const Dashboard: React.FC = () => {
           </div>
 
           {/* Progress Overview */}
-          <div className="bg-purdue-black border border-purdue-gold p-8">
-            <h2 className="text-2xl font-semibold text-purdue-gold mb-6">Degree Progress</h2>
+          <div className="bg-minimal-card border border-minimal-border p-8 rounded-sm">
+            <h2 className="text-2xl font-semibold text-minimal-text mb-6">Degree Progress</h2>
             <ProgressChart />
           </div>
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-8">
+          <div className="bg-minimal-card border border-minimal-border p-6 rounded-sm">
           {/* AI Assistant Widget */}
           <AIWidget />
 
           {/* Featured: Quick AI Questions */}
           <div className="bg-purdue-black border border-purdue-gold p-6">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-purdue-gold flex items-center justify-center">
-                <Bot className="w-6 h-6 text-purdue-black" />
+              <div className="w-12 h-12 bg-minimal-card border border-minimal-border flex items-center justify-center rounded-sm">
+                <Bot className="w-6 h-6 text-minimal-text" />
               </div>
               <div>
-                <h3 className="font-semibold text-purdue-gold text-lg">Ask Boiler AI</h3>
-                <p className="text-sm text-purdue-gold opacity-80">Get instant academic guidance</p>
+                <h3 className="font-semibold text-minimal-text text-lg">Ask Boiler AI</h3>
+                <p className="text-sm text-minimal-text opacity-80">Get instant academic guidance</p>
               </div>
             </div>
             <div className="space-y-3">
               <Link
                 to="/ai-assistant"
-                className="block w-full text-left p-4 bg-purdue-black border border-purdue-gold hover:bg-purdue-medium transition-all duration-200 text-sm text-purdue-gold"
+                className="block w-full text-left p-4 bg-minimal-card border border-minimal-border hover:bg-minimal-hover transition-all duration-200 text-sm text-minimal-text rounded-sm"
               >
                 "What courses should I take next semester?"
               </Link>
               <Link
                 to="/ai-assistant"
-                className="block w-full text-left p-4 bg-purdue-black border border-purdue-gold hover:bg-purdue-medium transition-all duration-200 text-sm text-purdue-gold"
+                className="block w-full text-left p-4 bg-minimal-card border border-minimal-border hover:bg-minimal-hover transition-all duration-200 text-sm text-minimal-text rounded-sm"
               >
                 "How do I change my major to CS?"
               </Link>
@@ -164,28 +164,28 @@ const Dashboard: React.FC = () => {
           <QuickActions />
 
           {/* Upcoming Deadlines */}
-          <div className="bg-purdue-black border border-purdue-gold p-6">
-            <h3 className="text-lg font-semibold text-purdue-gold mb-6">Upcoming Deadlines</h3>
+          <div className="bg-minimal-card border border-minimal-border p-6 rounded-sm">
+            <h3 className="text-lg font-semibold text-minimal-text mb-6">Upcoming Deadlines</h3>
             <div className="space-y-4">
-              <div className="flex items-center space-x-4 p-4 bg-purdue-black border border-purdue-gold">
-                <Clock className="w-5 h-5 text-purdue-gold" />
+              <div className="flex items-center space-x-4 p-4 bg-minimal-card border border-minimal-border rounded-sm">
+                <Clock className="w-5 h-5 text-minimal-text" />
                 <div>
-                  <p className="text-sm font-medium text-purdue-gold">CS 25100 Project</p>
-                  <p className="text-xs text-purdue-gold opacity-80">Due March 10</p>
+                  <p className="text-sm font-medium text-minimal-text">CS 25100 Project</p>
+                  <p className="text-xs text-minimal-text opacity-80">Due March 10</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4 p-4 bg-purdue-black border border-purdue-gold">
-                <Calendar className="w-5 h-5 text-purdue-gold" />
+              <div className="flex items-center space-x-4 p-4 bg-minimal-card border border-minimal-border rounded-sm">
+                <Calendar className="w-5 h-5 text-minimal-text" />
                 <div>
-                  <p className="text-sm font-medium text-purdue-gold">Registration Opens</p>
-                  <p className="text-xs text-purdue-gold opacity-80">March 15</p>
+                  <p className="text-sm font-medium text-minimal-text">Registration Opens</p>
+                  <p className="text-xs text-minimal-text opacity-80">March 15</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4 p-4 bg-purdue-black border border-purdue-gold">
-                <FileText className="w-5 h-5 text-purdue-gold" />
+              <div className="flex items-center space-x-4 p-4 bg-minimal-card border border-minimal-border rounded-sm">
+                <FileText className="w-5 h-5 text-minimal-text" />
                 <div>
-                  <p className="text-sm font-medium text-purdue-gold">MATH 26600 Midterm</p>
-                  <p className="text-xs text-purdue-gold opacity-80">March 18</p>
+                  <p className="text-sm font-medium text-minimal-text">MATH 26600 Midterm</p>
+                  <p className="text-xs text-minimal-text opacity-80">March 18</p>
                 </div>
               </div>
             </div>
