@@ -43,7 +43,7 @@ const Dashboard: React.FC = () => {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
-          <div className="bg-minimal-card border border-minimal-border p-6 rounded-sm">
+          title="Current Courses"
           value="5"
           change="+1 from last semester"
           icon={BookOpen}
@@ -72,10 +72,10 @@ const Dashboard: React.FC = () => {
         {/* Main Content */}
         <div className="lg:col-span-2 space-y-6">
           {/* Current Courses */}
-          <div className="bg-purdue-black border border-purdue-gold p-6">
+          <div className="bg-subtle-card border border-subtle-border p-6 rounded-sm">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-medium text-minimal-text">Current Courses</h2>
-              <span className="text-xs font-medium text-minimal-text uppercase tracking-wide opacity-80">Spring 2025</span>
+              <h2 className="text-xl font-medium text-subtle-text">Current Courses</h2>
+              <span className="text-xs font-medium text-subtle-text-secondary uppercase tracking-wide">Spring 2025</span>
             </div>
             <div className="space-y-4">
               <CourseCard
@@ -122,41 +122,41 @@ const Dashboard: React.FC = () => {
           </div>
 
           {/* Progress Overview */}
-          <div className="bg-minimal-card border border-minimal-border p-8 rounded-sm">
-            <h2 className="text-2xl font-semibold text-minimal-text mb-6">Degree Progress</h2>
+          <div className="bg-subtle-card border border-subtle-border p-8 rounded-sm">
+            <h2 className="text-2xl font-semibold text-subtle-text mb-6">Degree Progress</h2>
             <ProgressChart />
           </div>
         </div>
 
         {/* Sidebar */}
-          <div className="bg-minimal-card border border-minimal-border p-6 rounded-sm">
+        <div className="space-y-6">
           {/* AI Assistant Widget */}
           <AIWidget />
 
           {/* Featured: Quick AI Questions */}
-          <div className="bg-purdue-black border border-purdue-gold p-6">
+          <div className="bg-subtle-card border border-subtle-border p-6 rounded-sm">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-minimal-card border border-minimal-border flex items-center justify-center rounded-sm">
-                <Bot className="w-6 h-6 text-minimal-text" />
+              <div className="w-12 h-12 bg-subtle-hover border border-subtle-border flex items-center justify-center rounded-sm">
+                <Bot className="w-6 h-6 text-subtle-text" />
               </div>
               <div>
-                <h3 className="font-semibold text-minimal-text text-lg">Ask Boiler AI</h3>
-                <p className="text-sm text-minimal-text opacity-80">Get instant academic guidance</p>
+                <h3 className="font-semibold text-subtle-text text-lg">Ask Boiler AI</h3>
+                <p className="text-sm text-subtle-text-secondary">Get instant academic guidance</p>
               </div>
             </div>
             <div className="space-y-3">
-              <Link
+              <button
                 to="/ai-assistant"
-                className="block w-full text-left p-4 bg-minimal-card border border-minimal-border hover:bg-minimal-hover transition-all duration-200 text-sm text-minimal-text rounded-sm"
+                className="block w-full text-left p-4 bg-subtle-hover border border-subtle-border hover:bg-subtle-border transition-all duration-200 text-sm text-subtle-text rounded-sm"
               >
                 "What courses should I take next semester?"
-              </Link>
-              <Link
+              </button>
+              <button
                 to="/ai-assistant"
-                className="block w-full text-left p-4 bg-minimal-card border border-minimal-border hover:bg-minimal-hover transition-all duration-200 text-sm text-minimal-text rounded-sm"
+                className="block w-full text-left p-4 bg-subtle-hover border border-subtle-border hover:bg-subtle-border transition-all duration-200 text-sm text-subtle-text rounded-sm"
               >
                 "How do I change my major to CS?"
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -164,28 +164,28 @@ const Dashboard: React.FC = () => {
           <QuickActions />
 
           {/* Upcoming Deadlines */}
-          <div className="bg-minimal-card border border-minimal-border p-6 rounded-sm">
-            <h3 className="text-lg font-semibold text-minimal-text mb-6">Upcoming Deadlines</h3>
+          <div className="bg-subtle-card border border-subtle-border p-6 rounded-sm">
+            <h3 className="text-lg font-semibold text-subtle-text mb-6">Upcoming Deadlines</h3>
             <div className="space-y-4">
-              <div className="flex items-center space-x-4 p-4 bg-minimal-card border border-minimal-border rounded-sm">
-                <Clock className="w-5 h-5 text-minimal-text" />
+              <div className="flex items-center space-x-4 p-4 bg-subtle-hover border border-subtle-border rounded-sm">
+                <Clock className="w-5 h-5 text-subtle-text" />
                 <div>
-                  <p className="text-sm font-medium text-minimal-text">CS 25100 Project</p>
-                  <p className="text-xs text-minimal-text opacity-80">Due March 10</p>
+                  <p className="text-sm font-medium text-subtle-text">CS 25100 Project</p>
+                  <p className="text-xs text-subtle-text-secondary">Due March 10</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4 p-4 bg-minimal-card border border-minimal-border rounded-sm">
-                <Calendar className="w-5 h-5 text-minimal-text" />
+              <div className="flex items-center space-x-4 p-4 bg-subtle-hover border border-subtle-border rounded-sm">
+                <Calendar className="w-5 h-5 text-subtle-text" />
                 <div>
-                  <p className="text-sm font-medium text-minimal-text">Registration Opens</p>
-                  <p className="text-xs text-minimal-text opacity-80">March 15</p>
+                  <p className="text-sm font-medium text-subtle-text">Registration Opens</p>
+                  <p className="text-xs text-subtle-text-secondary">March 15</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4 p-4 bg-minimal-card border border-minimal-border rounded-sm">
-                <FileText className="w-5 h-5 text-minimal-text" />
+              <div className="flex items-center space-x-4 p-4 bg-subtle-hover border border-subtle-border rounded-sm">
+                <FileText className="w-5 h-5 text-subtle-text" />
                 <div>
-                  <p className="text-sm font-medium text-minimal-text">MATH 26600 Midterm</p>
-                  <p className="text-xs text-minimal-text opacity-80">March 18</p>
+                  <p className="text-sm font-medium text-subtle-text">MATH 26600 Midterm</p>
+                  <p className="text-xs text-subtle-text-secondary">March 18</p>
                 </div>
               </div>
             </div>
@@ -193,7 +193,6 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
     </div>
-  )
   );
 };
 
